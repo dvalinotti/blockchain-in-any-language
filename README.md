@@ -1,2 +1,2 @@
 # blockchain-in-any-language
-I develop a blockchain in every language.
+WIP: I am learning more languages by trying to develop a simple blockchain structure in as many languages as I can.
