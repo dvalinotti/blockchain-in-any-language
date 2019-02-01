@@ -15,3 +15,4 @@ for i in range(6):
     chain.add_block(gen_string())
 
 print(chain)
+print(chain.verify_ledger())

@@ -14,6 +14,15 @@ class Blockchain:
         next_block = Block.next_block(last_block, data)
         self.ledger.append(next_block)
 
+    def verify_ledger(self):
+        compare = False
+        for i in range(1, len(self.ledger)):
+            compare = ( self.ledger[i].prev_hash == self.ledger[i-1].hash )
+            if (not compare):
+                raise ValueError('Blockchain verification FAILED at index ' + str(i))
+                break
+        return compare
+
     def __repr__(self):
         ret_str = ""
         for b in self.ledger:
